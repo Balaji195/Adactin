@@ -1,0 +1,22 @@
+public class AscendingOrderSort {
+
+	public static void main(String[] args) {
+		
+		Scanner l = new Scanner(System.in);
+		System.out.println("Enter the Number Of Element: ");
+		int s = l.nextInt();
+		int a[] = new int[s];
+		
+		System.out.println("Enter The Numbers: ");
+		for (int i = 0; i < s; i++) {
+			a[i]= l.nextInt();
+		}
+		
+		Arrays.sort(a);
+		
+		for (int i = 0; i < a.length; i++) {
+			System.out.println(a[i]);
+		}
+		
+	}
+}
