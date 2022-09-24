@@ -1,0 +1,44 @@
+Feature: Checking the Hotel booking functionality of an Adactin Application
+
+Scenario Outline: Login Functionality
+Given user Must Launch the Url
+When user Enter the "<username>" In The Username Field
+And user Enter the "<password>" In the Password Field
+Then user Click The Login Button And it Navigates to the Search Hotel Page 
+
+
+Examples:
+|username|password|
+|abc|123|
+|bala|1995|
+|Balaji95|12345678|
+
+Scenario: Search Hotel Functionality
+When user Select The Location In the Location Field
+And user Select The Hotel In the Hotel Field
+And user Select The RoomType In the RoomType Field
+And user Select The Number of Rooms In the Number of Rooms Field
+And user Select The Number of Adults Per Room In the Number of Adults Field
+And user Select The Number of Children Per Room In the Number of Children Field
+Then user Click The Search Button To Navigates To The Select Hotel Page
+
+
+Scenario: Select Hotel Functionality
+When user Select The Hotel In The Hotel Selection Field
+Then user Click The Continue Button To Navigates To The Book Hotel Page
+
+
+Scenario: Book A Hotel Functionality
+When user Enter The FirstName In the FirstName Field
+And user Enter The LastName In the LastName Field
+And user Enter The Billing Address In the Billing Address Field
+And user Enter The CreditCard Number In the CreditCard Number Field
+And user Select The CreditCard Type In the CreditCard Type Field
+And user Select The Month In the CreditCard Details Field
+And user Select The Year In the CreditCard Details Field
+And user Enter The CVV Number In the CVV Number Field
+Then user Click The Book Now Button To Navigates To The Booking Confirmation Page
+
+
+Scenario: Booking Confirmation Functionality
+Then user Click The Logout Button To Navigate To The Login Page 
